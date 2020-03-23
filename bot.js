@@ -7,19 +7,21 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === botSettings.prefix + 'av') {
-        let embed = new Discord.RichEmbed()
-            // Replace "message.member" with "message.author"
-            .setImage(message.author.avatarURL)
-            .setColor('#275BF0')
-        message.channel.send(embed)
-    }
-});
+        if (message.content.startsWith(botSettings.prefix + 'avatar')) {
+            let user = message.mentions.users.first();
+            if (!user) user = message.author;
+            const embed = new Discord.RichEmbed()
+                .setImage(user.avatarURL)
+            message.channel.send({
+                embed
+            });
+        }
+    }),
 
-client.on('message', message => {
-    if (message.content === botSettings.prefix + 'ranime') {
-        message.channel.send('Pong.');
-    }
-});
+    client.on('message', message => {
+        if (message.content === botSettings.prefix + 'ranime') {
+            message.channel.send('Pong.');
+        }
+    });
 
 client.login(botSettings.token);
