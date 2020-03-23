@@ -25,6 +25,10 @@ client.on('message', message => {
     client.on('message', message => {
         if (message.content === botSettings.prefix + 'test') {
             message.channel.send('Im alive');
+            message.react('👍')
+            let cnt = message.content
+            const cn = message.channel
+            message.delete(1000) // ?
         }
 
     });
