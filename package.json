@@ -20,7 +20,7 @@
   "dependencies": {
     "@discordjs/uws": "^10.149.0",
     "danbooru": "^3.0.3",
-    "discord.js": "^11.2.1",
+    "discord.js": "^11.6.3",
     "discord.js-commando": "^0.10.0",
     "google-images": "^2.1.0",
     "node-fetch": "^2.6.0"

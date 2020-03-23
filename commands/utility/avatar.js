@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const {
     Command
 } = require('discord.js-commando');
-
+const Danbooru = require('danbooru');
+const booru = new Danbooru();
 
 module.exports = class DanbooruCommand extends Command {
     constructor(client) {
@@ -19,15 +20,15 @@ module.exports = class DanbooruCommand extends Command {
             }, ]
         })
     }
-    run(msg, {
+    run(message, {
         member
     }) {
         const embed = new Discord.RichEmbed()
-            .setTitle(`Avatar of @${member.displayName}`)
-            .setImage(member.avatarURL)
+            .setTitle(`${member.user.username}'s Avatar`)
+            .setImage(member.user.avatarURL)
             .setColor('#FFFFFF')
-            .setFooter(`Requested by ${msg.member.displayName}`)
+            .setFooter(`Requested by ${message.member.displayName}`)
             .setTimestamp();
-        msg.channel.send(embed);
+        message.channel.send(embed);
     };
 }
