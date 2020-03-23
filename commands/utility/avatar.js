@@ -11,7 +11,7 @@ module.exports = class DanbooruCommand extends Command {
             name: 'avatar',
             memberName: 'avatar',
             group: 'utility',
-            description: 'Get the Avatar of yourself or an User with @ User',
+            description: 'Get the Avatar of yourself or an User with *avatar @User',
             guarded: true,
             args: [{
                 key: 'member',

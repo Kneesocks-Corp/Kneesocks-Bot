@@ -11,7 +11,7 @@ module.exports = class DanbooruCommand extends Command {
             name: 'kneesocks',
             memberName: 'kneesocks',
             group: 'fun',
-            description: 'Description',
+            description: 'Sends a random Kneesocks Image from Danbooru',
             guarded: true,
         })
     }
