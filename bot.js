@@ -1,5 +1,4 @@
 const botSettings = require("./botsettings.json");
-const ranime = require("./ranime,js")
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -8,9 +7,12 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === botSettings.prefix + 'ping') {
-        // send back "Pong." to the channel the message was sent in
-        ranime;
+    if (message.content === botSettings.prefix + 'av') {
+        let embed = new Discord.RichEmbed()
+            // Replace "message.member" with "message.author"
+            .setImage(message.author.avatarURL)
+            .setColor('#275BF0')
+        message.channel.send(embed)
     }
 });
 
