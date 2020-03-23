@@ -1,0 +1,24 @@
+{
+  "name": "Kneesocks-Bot",
+  "version": "1.0.0",
+  "description": "A bot to get images from Anime-Girls in Kneesocks",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kneesocks-Corp/Kneesocks-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kneesocks-Corp/Kneesocks-Bot/issues"
+  },
+  "homepage": "https://github.com/Kneesocks-Corp/Kneesocks-Bot#readme"
+}
