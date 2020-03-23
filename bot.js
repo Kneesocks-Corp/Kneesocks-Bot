@@ -1,5 +1,4 @@
 const botSettings = require("./botsettings.json");
-const GoogleImages = require("google-images");
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Danbooru = require('danbooru')
