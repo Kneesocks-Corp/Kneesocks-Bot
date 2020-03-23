@@ -1,5 +1,12 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.once('ready', () => {
+    console.log('Ready!');
+});
+
+client.login('NjkxNjIyMDY2NzEzMTMzMTU1.XnipSg.IHO40lKeKIM2uIwd2id2ZIm4r0c');
+
 const snekfetch = require('snekfetch');
 exports.run = async (client, message, args) => {
     try {
