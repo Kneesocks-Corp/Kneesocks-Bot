@@ -7,7 +7,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === '!ping') {
+    if (message.content === botSettings.prefix + 'ping') {
         // send back "Pong." to the channel the message was sent in
         message.channel.send('Pong.');
     }
