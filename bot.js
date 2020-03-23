@@ -1,4 +1,5 @@
 const botSettings = require("./botsettings.json");
+const GoogleImages = require('google-images');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -13,7 +14,7 @@ client.on('message', message => {
             message.react('👍')
             let cnt = message.content
             const cn = message.channel
-            message.delete(1000) // ?
+            message.delete(1500) // ?
             const embed = new Discord.RichEmbed()
                 .setImage(user.avatarURL)
             message.channel.send({
@@ -28,7 +29,7 @@ client.on('message', message => {
             message.react('👍')
             let cnt = message.content
             const cn = message.channel
-            message.delete(1000) // ?
+            message.delete(1500) // ?
         }
 
     });

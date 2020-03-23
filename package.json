@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Kneesocks-Corp/Kneesocks-Bot#readme",
   "dependencies": {
+    "@discordjs/uws": "^10.149.0",
     "discord.js": "^11.2.1",
+    "google-images": "^2.1.0",
     "node-fetch": "^2.6.0"
   }
 }
