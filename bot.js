@@ -11,7 +11,7 @@ client.on('message', message => {
 
 client.login('NjkxNjIyMDY2NzEzMTMzMTU1.XnipSg.IHO40lKeKIM2uIwd2id2ZIm4r0c');
 
-if (message.content === '*ranime') {
+if (message.content === '?ranime') {
     // sends back random r/anime image
     const snekfetch = require('snekfetch');
     exports.run = async (client, message, args) => {
