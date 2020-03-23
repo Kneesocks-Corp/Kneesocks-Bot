@@ -10,6 +10,7 @@ client.on('message', message => {
         if (message.content.startsWith(botSettings.prefix + 'avatar')) {
             let user = message.mentions.users.first();
             if (!user) user = message.author;
+            message.react('👍')
             const embed = new Discord.RichEmbed()
                 .setImage(user.avatarURL)
             message.channel.send({
@@ -19,8 +20,12 @@ client.on('message', message => {
     }),
 
     client.on('message', message => {
-        if (message.content === botSettings.prefix + 'ranime') {
-            message.channel.send('Pong.');
+        if (message.content === botSettings.prefix + 'Test') {
+            message.channel.send('Im alive');
+            then(msg => {
+                msg.delete(10000)
+
+            })
         }
     });
 
