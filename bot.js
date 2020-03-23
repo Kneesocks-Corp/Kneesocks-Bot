@@ -12,4 +12,5 @@ client.on('message', message => {
         message.channel.send('Pong.');
     }
 });
+
 client.login(botSettings.token);
