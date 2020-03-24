@@ -21,7 +21,7 @@ module.exports = class DanbooruCommand extends Command {
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Kneesocks")
                 .setColor('#FFFFFF')
-                .setImage("https:kneesocks.now.sh/api/v2/RKS-high)
+                .setImage("https://kneesocks.now.sh/api/v2/RKS)
                     .setFooter(`Requested by ${msg.member.displayName}`)
                     .setTimestamp(); msg.channel.send(embed);
                 }
