@@ -1,6 +1,6 @@
 {
     "builds": [{
-        "src": "*/.js",
+        "src": "**/*.js",
         "use": "@now/node"
     }],
     "env": {
