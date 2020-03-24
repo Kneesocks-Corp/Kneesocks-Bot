@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 require("dotenv").config();
 const Danbooru = require('danbooru')
 const booru = new Danbooru()
+const aws = require('aws-sdk');
 const {
     CommandoClient
 } = require('discord.js-commando');
@@ -50,4 +51,4 @@ client.on('ready', () => {
     }, 200000); // Runs this every 10 seconds.
 });
 
-client.login(process.env.token);
+client.login(process.env.S3_token);
