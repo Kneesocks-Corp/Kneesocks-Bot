@@ -19,12 +19,15 @@ module.exports = class DanbooruCommand extends Command {
         type
     }) {
         booru.posts({
+            random: "true",
             tags: 'rating:safe ahegao order:date'
         }).then(posts => {
             const index = Math.floor(Math.random() * posts.length);
             const post = posts[index];
 
             const url = booru.url(post.file_url)
+            msg.react("👍")
+            msg.delete(1500)
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Ahegao Faces")
                 .setColor('#FFFFFF')

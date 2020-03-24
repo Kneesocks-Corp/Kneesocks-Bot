@@ -18,7 +18,10 @@ module.exports = class DanbooruCommand extends Command {
     run(msg, {
         type
     }) {
+        msg.react("👍")
+        msg.delete(1500)
         booru.posts({
+            random: "true",
             tags: 'rating:safe kneehighs order:date'
         }).then(posts => {
             const index = Math.floor(Math.random() * posts.length);

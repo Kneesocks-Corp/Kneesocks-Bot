@@ -23,6 +23,8 @@ module.exports = class DanbooruCommand extends Command {
     run(message, {
         member
     }) {
+        message.react("👍")
+        message.delete(1500);
         const embed = new Discord.RichEmbed()
             .setTitle(`${member.user.username}'s Avatar`)
             .setImage(member.user.avatarURL)
