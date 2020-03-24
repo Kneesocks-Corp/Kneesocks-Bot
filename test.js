@@ -35,14 +35,6 @@ const activities_list = [
     "with Danbooru API"
 ]; // creates an arraylist containing phrases you want your bot to switch through.
 
-http.createServer((req, res) => {
-    res.writeHead(200, {
-        'Content-type': 'text/plain'
-    });
-    res.write('Hey');
-    res.end();
-}).listen(4000);
-
 client.on('ready', () => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
