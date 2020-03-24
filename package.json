@@ -2,7 +2,7 @@
   "name": "Kneesocks-Bot",
   "version": "1.0.0",
   "description": "A bot to get images from Anime-Girls in Kneesocks",
-  "main": "bot.js",
+  "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +23,7 @@
     "discord.js": "^11.6.3",
     "discord.js-commando": "^0.10.0",
     "google-images": "^2.1.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "rule34": "^1.0.0"
   }
 }

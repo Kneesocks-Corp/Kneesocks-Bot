@@ -10,7 +10,7 @@ const path = require('path');
 const client = new CommandoClient({
     commandPrefix: botSettings.prefix,
     owner: '202740603790819328',
-    unknownCommandResponse: false,
+    unknownCommandResponse: true,
 });
 
 
@@ -18,6 +18,7 @@ client.registry
     .registerDefaultTypes()
     .registerGroups([
         ['fun', 'Fun'],
+        ['nsfw', 'NSFW'],
     ])
     .registerDefaultGroups()
     .registerDefaultCommands({
@@ -37,7 +38,7 @@ client.on('ready', () => {
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
         client.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
-    }, 10000); // Runs this every 10 seconds.
+    }, 200000); // Runs this every 10 seconds.
 });
 
 client.login(botSettings.token);
