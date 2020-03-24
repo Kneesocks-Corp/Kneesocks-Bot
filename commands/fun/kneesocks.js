@@ -18,15 +18,16 @@ module.exports = class DanbooruCommand extends Command {
     run(msg, {
         type
     }) {
-        msg.react("👍")
-        msg.delete(1500)
         booru.posts({
             random: "true",
             tags: 'rating:safe kneehighs order:date'
         }).then(posts => {
             const index = Math.floor(Math.random() * posts.length);
             const post = posts[index];
+
             const url = booru.url(post.large_file_url)
+            msg.react("👍")
+            msg.delete(1500)
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Kneesocks")
                 .setColor('#FFFFFF')

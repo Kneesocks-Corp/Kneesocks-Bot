@@ -15,9 +15,7 @@ module.exports = class DanbooruCommand extends Command {
             guarded: true,
         })
     }
-    run(msg, {
-        type
-    }) {
+    run(msg) {
         booru.posts({
             random: "true",
             tags: 'rating:safe ahegao order:date'
@@ -31,7 +29,7 @@ module.exports = class DanbooruCommand extends Command {
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Ahegao Faces")
                 .setColor('#FFFFFF')
-                .setImage(post.large_file_url)
+                .setImage(url)
                 .setFooter(`Requested by ${msg.member.displayName}`)
                 .setTimestamp();
             msg.channel.send(embed);
