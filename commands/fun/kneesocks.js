@@ -24,6 +24,8 @@ module.exports = class DanbooruCommand extends Command {
             .setImage("https://kneesocks.now.sh/api/v2/RKS-high")
             .setFooter(`Requested by ${msg.member.displayName}`)
             .setTimestamp();
-        msg.channel.send(embed);
+        setTimeout(function(){ 
+           msg.channel.send(embed);
+        }, 5000);
     }
 }
