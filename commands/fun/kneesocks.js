@@ -28,7 +28,7 @@ module.exports = class DanbooruCommand extends Command {
         getRKS().then(result => {
             const imageStream = Buffer.from(result.split(',')[1], 'base64');
             const attachment = new Discord.MessageAttachment(imageStream);
-            msg.react("??")
+            msg.react("👍")
             msg.delete(1500)
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Kneesocks")
