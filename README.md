@@ -19,7 +19,8 @@ And you can grab the Avatar of someone.
 # Commands
 The Prefix of the Bot is *
 
-* *ahegao - Post a random Ahegao Image from Danbooru
+* *sahegao - Post a random SFW Ahegao Image from Danbooru
+* *ahegao - Posts a NSFW Ahegao Image from Danbooru
 * *kneesocks - Post a random Kneesocks Image from Danbooru
 * *avatar @User - Posts the Avatar of the User
 
