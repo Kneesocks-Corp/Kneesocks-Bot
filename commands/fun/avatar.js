@@ -10,7 +10,7 @@ module.exports = class DanbooruCommand extends Command {
         super(client, {
             name: 'avatar',
             memberName: 'avatar',
-            group: 'utility',
+            group: 'fun',
             description: 'Get the Avatar of yourself or an User with *avatar @User',
             guarded: true,
             args: [{

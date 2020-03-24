@@ -17,7 +17,6 @@ client.registry
     .registerDefaultTypes()
     .registerGroups([
         ['fun', 'Fun'],
-        ['utility', 'Utility'],
     ])
     .registerDefaultGroups()
     .registerDefaultCommands({
