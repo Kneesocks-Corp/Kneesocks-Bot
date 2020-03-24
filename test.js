@@ -1,6 +1,8 @@
 const botSettings = require("./botsettings.json");
 const Discord = require('discord.js');
 const env = require("./now.json");
+require('http').createServer().listen(3000)
+require("dotenv").config();
 const Danbooru = require('danbooru')
 const booru = new Danbooru()
 const {
@@ -43,4 +45,3 @@ client.on('ready', () => {
 });
 
 client.login(process.env.token);
-require('http').createServer().listen(3000)
