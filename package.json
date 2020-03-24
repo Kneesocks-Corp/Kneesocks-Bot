@@ -2,10 +2,10 @@
   "name": "Kneesocks-Bot",
   "version": "1.0.0",
   "description": "A bot to get images from Anime-Girls in Kneesocks",
-  "main": "index.js",
+  "main": "test,js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node test.js"
   },
   "repository": {
     "type": "git",

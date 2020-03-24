@@ -1,6 +1,5 @@
 const botSettings = require("./botsettings.json");
 const Discord = require('discord.js');
-const http = require('http');
 require("dotenv").config();
 const Danbooru = require('danbooru')
 const booru = new Danbooru()
