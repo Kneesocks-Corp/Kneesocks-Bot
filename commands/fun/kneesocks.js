@@ -3,7 +3,7 @@ const {
     Command
 } = require('discord.js-commando');
 const Danbooru = require('danbooru');
-const axious = require('axios');
+const axios = require('axios');
 const booru = new Danbooru();
 
 module.exports = class DanbooruCommand extends Command {
