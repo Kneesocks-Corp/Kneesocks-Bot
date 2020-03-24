@@ -1,5 +1,6 @@
 const botSettings = require("./botsettings.json");
 const Discord = require('discord.js');
+const env = require("./now.json");
 const Danbooru = require('danbooru')
 const booru = new Danbooru()
 const {
@@ -41,4 +42,4 @@ client.on('ready', () => {
     }, 200000); // Runs this every 10 seconds.
 });
 
-client.login(botSettings.token);
+client.login(process.env.token);
