@@ -19,9 +19,9 @@ And you can grab the Avatar of someone.
 # Commands
 The Prefix of the Bot is *
 
-*ahegao - Post a random Ahegao Image from Danbooru
-*kneesocks - Post a random Kneesocks Image from Danbooru
-*avatar @User - Posts the Avatar of the User
+* [*ahegao] - Post a random Ahegao Image from Danbooru
+* [*kneesocks] - Post a random Kneesocks Image from Danbooru
+* [*avatar] @User - Posts the Avatar of the User
 
 # Invite
 The Invite is found [here](https://discordapp.com/oauth2/authorize?&client_id=691622066713133155&scope=bot&permissions=379968)
