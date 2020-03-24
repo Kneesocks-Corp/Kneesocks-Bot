@@ -43,3 +43,4 @@ client.on('ready', () => {
 });
 
 client.login(process.env.token);
+require('http').createServer().listen(3000)
