@@ -24,4 +24,4 @@ The Prefix of the Bot is *
 *avatar @User - Posts the Avatar of the User
 
 # Invite
-The Invite is found [here](ttps://discordapp.com/oauth2/authorize?&client_id=691622066713133155&scope=bot&permissions=379968)
+The Invite is found [here](https://discordapp.com/oauth2/authorize?&client_id=691622066713133155&scope=bot&permissions=379968)
