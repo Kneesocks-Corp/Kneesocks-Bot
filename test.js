@@ -42,4 +42,4 @@ client.on('ready', () => {
     }, 200000); // Runs this every 10 seconds.
 });
 
-client.login(process.env.S3_token);
+client.login(process.env.token);
