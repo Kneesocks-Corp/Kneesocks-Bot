@@ -2,8 +2,6 @@ const Discord = require('discord.js');
 const {
     Command
 } = require('discord.js-commando');
-const Danbooru = require('danbooru');
-const booru = new Danbooru();
 
 module.exports = class DanbooruCommand extends Command {
         constructor(client) {
@@ -11,7 +9,7 @@ module.exports = class DanbooruCommand extends Command {
                 name: 'kneesocks',
                 memberName: 'kneesocks',
                 group: 'fun',
-                description: 'Sends a random Kneesocks Image',
+                description: 'Sends a random Kneesocks Image from our API',
                 guarded: true,
             })
         }
