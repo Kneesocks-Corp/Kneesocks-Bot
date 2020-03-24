@@ -1,7 +1,6 @@
 const botSettings = require("./botsettings.json");
 const Discord = require('discord.js');
-const env = require("./now.json");
-require('http').createServer().listen(3000)
+const http = require('http');
 require("dotenv").config();
 const Danbooru = require('danbooru')
 const booru = new Danbooru()
@@ -36,6 +35,14 @@ const activities_list = [
     "with Akira <3",
     "with Danbooru API"
 ]; // creates an arraylist containing phrases you want your bot to switch through.
+
+http.createServer((req, res) => {
+    res.writeHead(200, {
+        'Content-type': 'text/plain'
+    });
+    res.write('Hey');
+    res.end();
+}).listen(4000);
 
 client.on('ready', () => {
     setInterval(() => {
