@@ -21,8 +21,15 @@ The Prefix of the Bot is *
 
 * *sahegao - Post a random SFW Ahegao Image from Danbooru
 * *ahegao - Posts a NSFW Ahegao Image from Danbooru
+* *dicks - Posts a Dick Image from Danbooru
+* *yaoi - Posts a Yaoi Image from Danbooru
+* *league - Get some League of Legends Hentai ^^ :3
+* *yuri - Posts a Yuri Image from Danbooru
+* *couple - Posts a Couple Image from Danbooru
+* *solo - Posts a Solo Image from Danbooru
 * *kneesocks - Post a random Kneesocks Image from Danbooru
 * *avatar @User - Posts the Avatar of the User
+
 
 # Invite
 The Invite is found [here](https://discordapp.com/oauth2/authorize?&client_id=691622066713133155&scope=bot&permissions=379968)
