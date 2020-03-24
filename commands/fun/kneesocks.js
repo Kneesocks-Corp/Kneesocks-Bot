@@ -15,19 +15,24 @@ module.exports = class DanbooruCommand extends Command {
             guarded: true,
         })
     }
-    run(msg, {
-        type
-    }) {
-        msg.react("??")
-        msg.delete(1500)
-        const embed = new Discord.RichEmbed()
-            .setDescription("Here are random Kneesocks")
-            .setColor('#FFFFFF')
-            .setImage("https://kneesocks.now.sh/api/v2/RKS-high")
-            .setFooter(`Requested by ${msg.member.displayName}`)
-            .setTimestamp();
-        setTimeout(function () {
+    run(msg) {
+        booru.posts({
+            random: "true",
+            tags: 'rating:safe kneehighs order:date'
+        }).then(posts => {
+            const index = Math.floor(Math.random() * posts.length);
+            const post = posts[index];
+
+            const url = booru.url(post.large_file_url)
+            msg.react("👍")
+            msg.delete(1500)
+            const embed = new Discord.RichEmbed()
+                .setDescription("Here are random Kneesocks")
+                .setColor('#FFFFFF')
+                .setImage(url)
+                .setFooter(`Requested by ${msg.member.displayName}`)
+                .setTimestamp();
             msg.channel.send(embed);
-        }, 5000);
+        })
     }
 }
