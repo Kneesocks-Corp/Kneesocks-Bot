@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const {
     Command
 } = require('discord.js-commando');
+const Danbooru = require('danbooru');
+const booru = new Danbooru();
 
 module.exports = class DanbooruCommand extends Command {
     constructor(client) {
@@ -9,14 +11,14 @@ module.exports = class DanbooruCommand extends Command {
             name: 'kneesocks',
             memberName: 'kneesocks',
             group: 'fun',
-            description: 'Sends a random Kneesocks Image from our API',
+            description: 'Sends a random Kneesocks Image from Danbooru',
             guarded: true,
         })
     }
     run(msg, {
         type
     }) {
-        msg.react("👍")
+        msg.react("??")
         msg.delete(1500)
         const embed = new Discord.RichEmbed()
             .setDescription("Here are random Kneesocks")
@@ -24,6 +26,8 @@ module.exports = class DanbooruCommand extends Command {
             .setImage("https://kneesocks.now.sh/api/v2/RKS-high")
             .setFooter(`Requested by ${msg.member.displayName}`)
             .setTimestamp();
-        msg.channel.send(embed);
+        setTimeout(function () {
+            msg.channel.send(embed);
+        }, 5000);
     }
 }
