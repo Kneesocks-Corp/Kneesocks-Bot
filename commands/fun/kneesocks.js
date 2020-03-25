@@ -3,7 +3,7 @@ const {
     Command
 } = require('discord.js-commando');
 const Danbooru = require('danbooru');
-const axious = require('axios');
+const axios = require('axios');
 const booru = new Danbooru();
 
 module.exports = class DanbooruCommand extends Command {
@@ -17,20 +17,25 @@ module.exports = class DanbooruCommand extends Command {
         })
     }
     run(msg) {
-        booru.posts({
-            random: "true",
-            tags: 'rating:safe kneehighs order:date'
-        }).then(posts => {
-            const index = Math.floor(Math.random() * posts.length);
-            const post = posts[index];
-
-            const url = booru.url(post.large_file_url)
+		async function getRKS() {
+			const res = await axios.get(`https://kneesocks.now.sh/api/v2/RKS.json`);
+			if (res.length == 0) {
+				return false;
+			} else {
+				return res.data.data;
+			}
+		};
+        getRKS().then(result => {
+			
             msg.react("👍")
             msg.delete(1500)
+			const imageStream = Buffer.from(result.split(',')[1], 'base64');
+			const attachment = new Discord.Attachment(imageStream);
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Kneesocks")
                 .setColor('#FFFFFF')
-                .setImage(url)
+                .attachFile(attachment)
+		        .setImage('attachment://file.jpg')
                 .setFooter(`Requested by ${msg.member.displayName}`)
                 .setTimestamp();
             msg.channel.send(embed);
