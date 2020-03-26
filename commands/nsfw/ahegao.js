@@ -17,23 +17,25 @@ module.exports = class AhegaoCommand extends Command {
         })
     }
     run(msg) {
-        booru.posts({
-            random: "true",
-            tags: 'ahegao order:date'
-        }).then(posts => {
-            const index = Math.floor(Math.random() * posts.length);
-            const post = posts[index];
+        if (message.channel.nsfw === true) {
+            booru.posts({
+                random: "true",
+                tags: 'ahegao order:date'
+            }).then(posts => {
+                const index = Math.floor(Math.random() * posts.length);
+                const post = posts[index];
 
-            const url = booru.url(post.large_file_url);
-            msg.react("👍");
-            msg.delete(1500);
-            const embed = new Discord.RichEmbed()
-                .setDescription("Here are random Ahegao Faces")
-                .setColor('#FFFFFF')
-                .setImage(url)
-                .setFooter(`Requested by ${msg.member.displayName}`)
-                .setTimestamp();
-            msg.channel.send(embed);
-        })
+                const url = booru.url(post.large_file_url);
+                msg.react("👍");
+                msg.delete(1500);
+                const embed = new Discord.RichEmbed()
+                    .setDescription("Here are random Ahegao Faces")
+                    .setColor('#FFFFFF')
+                    .setImage(url)
+                    .setFooter(`Requested by ${msg.member.displayName}`)
+                    .setTimestamp();
+                msg.channel.send(embed);
+            })
+        }
     }
 }
