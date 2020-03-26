@@ -11,7 +11,7 @@ const path = require('path');
 const client = new CommandoClient({
     commandPrefix: botSettings.prefix,
     owner: '202740603790819328',
-    unknownCommandResponse: true,
+    unknownCommandResponse: false,
 });
 
 
