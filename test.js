@@ -45,10 +45,4 @@ client.on('ready', () => {
     }, 200000); // Runs this every 10 seconds.
 });
 
-client.on('message', message => {
-    if (message.content === '*guilds') {
-        message.channel.send(JoinSize);
-    }
-});
-
 client.login(process.env.token);
