@@ -8,6 +8,8 @@ const {
 } = require('discord.js-commando');
 const path = require('path');
 
+const JoinSize = this.client.guilds.size;
+
 const client = new CommandoClient({
     commandPrefix: botSettings.prefix,
     owner: '202740603790819328',
@@ -27,6 +29,8 @@ client.registry
         ping: true,
     })
     .registerCommandsIn(path.join(__dirname, 'commands'));
+
+
 
 const activities_list = [
     "with the *help command.",
