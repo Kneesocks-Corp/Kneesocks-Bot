@@ -17,7 +17,7 @@ module.exports = class AhegaoCommand extends Command {
         })
     }
     run(msg) {
-        if (message.channel.nsfw === true) {
+        if (msg.channel.nsfw === true) {
             booru.posts({
                 random: "true",
                 tags: 'ahegao order:date'
@@ -37,7 +37,7 @@ module.exports = class AhegaoCommand extends Command {
                 msg.channel.send(embed);
             })
         } else
-            message.channel.send("The Channel isnt NSFW");
+            msg.channel.send("The Channel isnt NSFW");
     }
 
 }
