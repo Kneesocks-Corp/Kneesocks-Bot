@@ -22,7 +22,7 @@ module.exports = class DanbooruCommand extends Command {
         const embed = new Discord.MessageEmbed()
             .setDescription("")
             .setColor('#FFFFFF')
-            .addField('The Bot is in ' + client.servers.length)
+            .addField('The Bot is in ' + client.guilds.size)
             .setImage("https://i.imgur.com/dvD87vx.png")
             .setFooter(`Requested by ${msg.member.displayName}`)
             .setTimestamp();
