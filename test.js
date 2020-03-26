@@ -30,6 +30,11 @@ client.registry
     })
     .registerCommandsIn(path.join(__dirname, 'commands'));
 
+client.on('message', message => {
+    if (message.content === '*guilds') {
+        message.channel.send(JoinSize);
+    }
+});
 
 
 const activities_list = [
