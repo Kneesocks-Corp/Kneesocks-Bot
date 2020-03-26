@@ -36,9 +36,12 @@ module.exports = class AhegaoCommand extends Command {
                     .setTimestamp();
                 msg.channel.send(embed);
             })
-        } else
+        }
+        if (msg.channel.nsfw === false) {
             msg.react("đ")
-        msg.delete(1500)
-        msg.channel.send(`Hey ${msg.member.displayName}, please use this Command in an NSFW Channel`);
+            msg.delete(1500)
+            msg.channel.send(`Hey ${msg.member.displayName}, please use this Command in an NSFW Channel`);
+        }
+
     }
 }
