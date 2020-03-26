@@ -8,8 +8,6 @@ const {
 } = require('discord.js-commando');
 const path = require('path');
 
-const JoinSize = client.guilds.size;
-
 const client = new CommandoClient({
     commandPrefix: botSettings.prefix,
     owner: '202740603790819328',
