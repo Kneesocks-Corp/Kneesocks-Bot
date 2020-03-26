@@ -36,6 +36,8 @@ module.exports = class AhegaoCommand extends Command {
                     .setTimestamp();
                 msg.channel.send(embed);
             })
-        }
+        } else
+            msg.channel.send("The Channel isnt NSFW");
     }
+
 }
