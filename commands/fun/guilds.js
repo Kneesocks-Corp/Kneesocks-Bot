@@ -21,6 +21,6 @@ module.exports = class DanbooruCommand extends Command {
         message.react("đ")
         message.delete(1500);
 
-        message.channel.send("Im in " + client.guilds.size);
+        message.channel.send("Im in " + client.guilds.cache.size);
     };
 }
