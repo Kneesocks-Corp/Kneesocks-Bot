@@ -13,11 +13,7 @@ module.exports = class DanbooruCommand extends Command {
             group: 'fun',
             description: 'Get the Avatar of yourself or an User with *avatar @User',
             guarded: true,
-            args: [{
-                key: 'member',
-                prompt: 'Please mention a member to get their avatar',
-                type: 'member',
-            }, ]
+            guarded: true,
         })
     }
     run(message, {
