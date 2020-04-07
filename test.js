@@ -30,10 +30,10 @@ client.registry
 
 
 const activities_list = [
-    "with the *help command.",
-    "with kneesocks",
-    "with Akira <3",
-    "with Danbooru API"
+    "with the *help command in ",
+    "with kneesocks in ",
+    "with Akira in ",
+    "with Danbooru API in "
 ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on("ready", () => {
