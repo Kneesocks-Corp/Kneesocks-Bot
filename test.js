@@ -38,7 +38,7 @@ const activities_list = [
 
 client.on("ready", () => {
     setInterval(() => {
-        let activities = [activities_list, `${client.guilds.size} servers!`],
+        let activities = ["Im in ", `${client.guilds.size} servers!`],
             index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         client.user.setActivity(activities[index])
     }, 5000);
