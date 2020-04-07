@@ -33,6 +33,7 @@ const activities_list = [
     "with the *help command.",
     "with kneesocks",
     "with Akira <3",
+    "Im in " + client.guilds.size,
     "with Danbooru API"
 ]; // creates an arraylist containing phrases you want your bot to switch through.
 
