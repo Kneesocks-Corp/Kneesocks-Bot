@@ -51,7 +51,6 @@ client.on('message', message => {
         msg.channel.send("Im in ", `${bot.guilds.size} servers!`);
 
     }
-}, )
-
+});
 
 client.login(process.env.token);
