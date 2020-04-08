@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const GuildSize = require("test.js");
+const GuildSize = [`${client.guilds.size}`];
 const {
     Command
 } = require('discord.js-commando');
