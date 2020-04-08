@@ -36,7 +36,7 @@ const activities_list = [
     "with Danbooru API in "
 ]; // creates an arraylist containing phrases you want your bot to switch through.
 
-const GuildSize = client.guilds.size
+const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {
     setInterval(() => {
