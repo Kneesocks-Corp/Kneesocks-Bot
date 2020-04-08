@@ -39,20 +39,18 @@ const activities_list = [
 const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {
-    setInterval(() => {
-        let activities = ["", `in ${client.guilds.size} servers!`],
-            index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        client.user.setActivity(activities[index])
-    }, 5000);
-});
+            setInterval(() => {
+                    client.user.setActivity([`in ${client.guilds.size} servers!`)
+                    }, 5000);
+            });
 
-client.on('message', message => {
-    if (message.content === '*guilds') {
-        message.react("đ")
-        message.delete(1500)
-        message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
+        client.on('message', message => {
+            if (message.content === '*guilds') {
+                message.react("đ")
+                message.delete(1500)
+                message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
 
-    }
-});
+            }
+        });
 
-client.login(process.env.token);
+        client.login(process.env.token);
