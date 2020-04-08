@@ -15,6 +15,7 @@ const client = new CommandoClient({
 });
 
 
+// command groups for help
 client.registry
     .registerDefaultTypes()
     .registerGroups([
@@ -28,21 +29,27 @@ client.registry
     })
     .registerCommandsIn(path.join(__dirname, 'commands'));
 
-const GuildSize = [`${client.guilds.size}`]
+//const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {
     setInterval(() => {
+        // sets Bot Game to Guild Size on Startup
         client.user.setActivity(`in ${client.guilds.size} servers!`);
     }, 5000);
 });
 
+
+// didnt worked as own js command so it needs to be here sowwy <3
 client.on('message', message => {
     if (message.content === '*guilds') {
         message.react("đ")
+        // reacts with thumbsup emojie and then deletes in the column below
         message.delete(1500)
         message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
 
     }
 });
+
+// bot token always secured as secret <3
 
 client.login(process.env.token);
