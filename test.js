@@ -40,7 +40,7 @@ const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {
     setInterval(() => {
-        client.user.setActivity(activities_list `in ${client.guilds.size} servers!`);
+        client.user.setActivity(activities_list + `in ${client.guilds.size} servers!`);
     }, 5000);
 });
 
