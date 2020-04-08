@@ -50,7 +50,7 @@ client.on('message', message => {
     if (message.content === '*yeet') {
         message.react("đ")
         message.delete(1500)
-        message.channel.send("Im in " + GuildSize + " Servers");
+        message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
 
     }
 });
