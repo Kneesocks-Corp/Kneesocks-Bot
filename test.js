@@ -39,7 +39,7 @@ client.on("ready", () => {
 });
 
 client.on('message', message => {
-    if (message.content === '*yeet') {
+    if (message.content === '*guilds') {
         message.react("đ")
         message.delete(1500)
         message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
