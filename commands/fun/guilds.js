@@ -15,7 +15,7 @@ module.exports = class DanbooruCommand extends Command {
             guarded: true,
         })
     }
-    run(msg) {
+    run(message) {
         message.react("đ")
         message.delete(1500)
         message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
