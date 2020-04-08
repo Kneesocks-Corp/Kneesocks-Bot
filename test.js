@@ -36,6 +36,8 @@ const activities_list = [
     "with Danbooru API in "
 ]; // creates an arraylist containing phrases you want your bot to switch through.
 
+const GuildSize = client.guilds.size
+
 client.on("ready", () => {
     setInterval(() => {
         let activities = ["", `in ${client.guilds.size} servers!`],
@@ -48,7 +50,7 @@ client.on('message', message => {
     if (message.content === '*yeet') {
         message.react("đ")
         message.delete(1500)
-        message.channel.send("", `in ${client.guilds.size} servers!`);
+        message.channel.send("Im in " + GuildSize + " Servers");
 
     }
 });
