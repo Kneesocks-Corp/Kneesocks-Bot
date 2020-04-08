@@ -28,14 +28,6 @@ client.registry
     })
     .registerCommandsIn(path.join(__dirname, 'commands'));
 
-
-const activities_list = [
-    "with the *help command in ",
-    "with kneesocks in ",
-    "with Akira in ",
-    "with Danbooru API in "
-]; // creates an arraylist containing phrases you want your bot to switch through.
-
 const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {

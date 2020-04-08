@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const GuildSize = require("./test.js");
 const {
     Command
 } = require('discord.js-commando');
@@ -18,6 +19,6 @@ module.exports = class DanbooruCommand extends Command {
     run(message) {
         message.react("đ")
         message.delete(1500)
-        message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
+        message.channel.send("Im in " + GuildSize + " Servers");
     }
 }
