@@ -40,9 +40,7 @@ const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {
     setInterval(() => {
-        let activities = ["", `in ${client.guilds.size} servers!`],
-            index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
-        client.user.setActivity(activities[index])
+        client.user.setActivity(activities["", `in ${client.guilds.size} servers!`])
     }, 5000);
 });
 
