@@ -38,10 +38,19 @@ const activities_list = [
 
 client.on("ready", () => {
     setInterval(() => {
-        let activities = ["", `Im in ${client.guilds.size} servers!`],
+        let activities = ["Im in", `${client.guilds.size} servers!`],
             index = Math.floor(Math.random() * (activities_list.length - 1) + 1);
         client.user.setActivity(activities[index])
     }, 5000);
+});
+
+client.on('message', message => {
+    if (message.content === bot.prefix + '*yeet') {
+        message.react("đ")
+        message.delete(1500)
+        message.channel.send("Im in ", `${bot.guilds.size} servers!`);
+
+    }
 });
 
 client.login(process.env.token);
