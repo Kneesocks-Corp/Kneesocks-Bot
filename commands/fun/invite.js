@@ -18,7 +18,6 @@ module.exports = class DanbooruCommand extends Command {
     run(msg) {
         msg.react("đ")
         msg.delete(1500)
-        msg.log(`Someone used Invite Command ${guild.name} `);
         const embed = new Discord.RichEmbed()
             .setTitle("To invite me to your Server follow this Link")
             .setDescription("https://discordapp.com/oauth2/authorize?&client_id=691622066713133155&scope=bot&permissions=379968")

@@ -42,8 +42,7 @@ client.on("ready", () => {
 // didnt worked as own js command so it needs to be here sowwy <3
 client.on('message', message => {
     if (message.content === '*guilds') {
-        message.log(`Someone used Guild Command ${guild.name} `)
-        // deletes in the column below
+        // reacts with thumbsup emojie and then deletes in the column below
         message.delete(1500)
         message.channel.send("Im in " + [`${client.guilds.size}`] + " Servers");
 

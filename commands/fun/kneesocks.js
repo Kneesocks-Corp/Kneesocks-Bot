@@ -29,7 +29,6 @@ module.exports = class DanbooruCommand extends Command {
 
             msg.react("👍")
             msg.delete(1500)
-            msg.log(`Someone used kneesocks Command ${guild.name} `);
             const imageStream = Buffer.from(result.split(',')[1], 'base64');
             const attachment = new Discord.Attachment(imageStream);
             const embed = new Discord.RichEmbed()
