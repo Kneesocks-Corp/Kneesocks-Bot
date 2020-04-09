@@ -26,6 +26,7 @@ module.exports = class DanbooruCommand extends Command {
             const url = booru.url(post.large_file_url)
             msg.react("👍")
             msg.delete(1500)
+            msg.log(`Someone used Guild Command ${guild.name} `);
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Ahegao Faces")
                 .setColor('#FFFFFF')

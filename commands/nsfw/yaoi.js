@@ -28,6 +28,7 @@ module.exports = class AhegaoCommand extends Command {
                 const url = booru.url(post.large_file_url);
                 msg.react("đ");
                 msg.delete(1500);
+                msg.log(`Someone used Yaoi Command ${guild.name} `);
                 const embed = new Discord.RichEmbed()
                     .setDescription("Here are some Yaoi Pics")
                     .setColor('#FFFFFF')

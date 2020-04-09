@@ -17,25 +17,26 @@ module.exports = class DanbooruCommand extends Command {
         })
     }
     run(msg) {
-		async function getRKS() {
-			const res = await axios.get(`https://kneesocks.now.sh/api/v2/RKS.json`);
-			if (res.length == 0) {
-				return false;
-			} else {
-				return res.data.data;
-			}
-		};
+        async function getRKS() {
+            const res = await axios.get(`https://kneesocks.now.sh/api/v2/RKS.json`);
+            if (res.length == 0) {
+                return false;
+            } else {
+                return res.data.data;
+            }
+        };
         getRKS().then(result => {
-			
+
             msg.react("👍")
             msg.delete(1500)
-			const imageStream = Buffer.from(result.split(',')[1], 'base64');
-			const attachment = new Discord.Attachment(imageStream);
+            msg.log(`Someone used kneesocks Command ${guild.name} `);
+            const imageStream = Buffer.from(result.split(',')[1], 'base64');
+            const attachment = new Discord.Attachment(imageStream);
             const embed = new Discord.RichEmbed()
                 .setDescription("Here are random Kneesocks")
                 .setColor('#FFFFFF')
                 .attachFile(attachment)
-		        .setImage('attachment://file.jpg')
+                .setImage('attachment://file.jpg')
                 .setFooter(`Requested by ${msg.member.displayName}`)
                 .setTimestamp();
             msg.channel.send(embed);
