@@ -25,7 +25,6 @@ module.exports = class DanbooruCommand extends Command {
     }) {
         message.react("👍")
         message.delete(1500);
-        console.log(`Someone used Ahegao Command ${guild.name}`);
         const embed = new Discord.RichEmbed()
             .setTitle(`${member.user.username}'s Avatar`)
             .setImage(member.user.avatarURL)
