@@ -1,8 +1,9 @@
 CommandTemplate.js
 
 .now
-.procfile
+Procfile
 _config.yml
-node_modules
+/node_modules
+/node_modules/*
 package-lock.json
-.vscode
+/.vscode
