@@ -1,6 +1,7 @@
 const botSettings = require("./botsettings.json");
 const Discord = require('discord.js');
 require("dotenv").config();
+var cli = new Discord.Client({autoReconnect:true});
 const Danbooru = require('danbooru')
 const booru = new Danbooru()
 const {
@@ -13,6 +14,11 @@ const client = new CommandoClient({
     owner: '202740603790819328',
     unknownCommandResponse: false,
 });
+
+function catchErr (err, client, message) {
+    client.users.get("202740603790819328").send ("Error in " + message.channel + " on the " + message.guild);
+    client.users.get("202740603790819328").send ("ERROR ```" + err + " ```");
+}
 
 
 // command groups for help
@@ -32,6 +38,7 @@ client.registry
 //const GuildSize = [`${client.guilds.size}`]
 
 client.on("ready", () => {
+    console.log("Im ready uwu");
     setInterval(() => {
         // sets Bot Game to Guild Size on Startup
         client.user.setActivity(`in ${client.guilds.size} servers!`);
@@ -49,6 +56,12 @@ client.on('message', message => {
     }
 });
 
+client.on('disconnected', function() {
+    client.login("***");
+});
+
 // bot token always secured as secret <3
 
-client.login(process.env.token);
+//client.login(process.env.token);
+
+client.login("***");
