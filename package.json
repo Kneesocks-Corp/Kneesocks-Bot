@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Kneesocks-Corp/Kneesocks-Bot#readme",
   "dependencies": {
     "@discordjs/uws": "^10.149.0",
-    "axios": "^0.19.2",
+    "axios": ">=0.21.1"
     "danbooru": "^3.0.3",
     "discord.js": "^11.6.3",
     "discord.js-commando": "^0.10.0",
