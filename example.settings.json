@@ -1,0 +1,14 @@
+{
+    "token": "****",
+    "PREFIX": "-k ",
+    "settings": {
+        "token": "****"
+    },
+    "APIKey": "****",
+    "bot_info": {
+        "Name": "Kneesocks-Bot",
+        "DiscordJS": "11.3.0",
+        "NodeJS": "12.17.0",
+        "Creation_Date": "07/06/2020"
+    }
+}
