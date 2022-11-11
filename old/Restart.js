@@ -1,5 +1,5 @@
-const { exec } = require('child_process');
-const CronJob = require('cron').CronJob;
+const { exec } = require("child_process");
+const CronJob = require("cron").CronJob;
 const restartCommand = "pm2 restart 0";
 const listCommand = "pm2 list";
 
@@ -10,12 +10,15 @@ const restartApp = function () {
     if (!err && !stderr) {
       console.log(new Date(), `App restarted!!!`);
       listApps();
-    }
-    else if (err || stderr) {
-      console.log(new Date(), `Error in executing ${restartCommand}`, err || stderr);
+    } else if (err || stderr) {
+      console.log(
+        new Date(),
+        `Error in executing ${restartCommand}`,
+        err || stderr
+      );
     }
   });
-}
+};
 
 function listApps() {
   exec(listCommand, (err, stdout, stderr) => {
@@ -25,7 +28,13 @@ function listApps() {
   });
 }
 
-new CronJob('0 0 2 * * *', function() {
-  console.log("Restarted App @ " + Date.now());
-  restartApp();
-}, null, true, 'America/Los_Angeles');
+new CronJob(
+  "0 0 2 * * *",
+  function () {
+    console.log("Restarted App @ " + Date.now());
+    restartApp();
+  },
+  null,
+  true,
+  "America/Los_Angeles"
+);

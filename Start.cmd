@@ -1,2 +1,1 @@
-cd src
-node index.js
+npm run start
