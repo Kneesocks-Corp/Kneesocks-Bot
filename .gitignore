@@ -1,21 +1,7 @@
-.now
-Procfile
-_config.yml
-/node_modules
-/node_modules/*
-package-lock.json
-/old/package-lock.json
-/old/node_modules/
-/.vscode
-/old/settings.json
-settings.json
-old.js
-.eslintrc.json
-.idea
-restartMessage
-
 # Config file
 config.json
+
+json.sqlite
 
 # Logs
 logs
