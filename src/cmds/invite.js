@@ -11,7 +11,7 @@ module.exports = {
          .setThumbnail('https://i.imgur.com/SL1L9Bn.png')
          .addFields({
             name: 'Invite Link',
-            value: 'https://discord.com/api/oauth2/authorize?client_id=841000000000000000&permissions=8&scope=bot%20applications.commands',
+            value: 'https://discord.com/oauth2/authorize?client_id=691622066713133155&scope=bot&permissions=277025508416',
             inline: false,
          });
 
