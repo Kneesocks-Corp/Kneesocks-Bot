@@ -121,10 +121,16 @@ client.on('interactionCreate', async (interaction) => {
          .catch(async (error) => {
             logger.info(error);
          });
+      if (!db.prepare('SELECT * FROM commandcount WHERE id = 0').get()) {
+         db.prepare(
+            'INSERT INTO commandcount (id, numbercount) VALUES (0, 0)'
+         ).run();
+      }
       // increase numbercount by 1
       db.prepare(
          'INSERT INTO commandcount (id, numbercount) values (0, 0) ON conflict (id) DO UPDATE SET numbercount=commandcount.numbercount+1;'
       ).run();
+      // if row in commandcount does not exist, create it
    } catch (error) {
       logger.info(error);
    }
