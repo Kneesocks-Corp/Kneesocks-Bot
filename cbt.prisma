@@ -1,0 +1,16 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model guilds {
+  guild_id  String @unique @id 
+  usercount Int @default(0)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by the Prisma Client.
+model commandcount {
+  id          Int @id @unique
+  numbercount Int
+}

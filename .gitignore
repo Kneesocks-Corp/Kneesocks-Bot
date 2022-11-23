@@ -2,6 +2,10 @@
 config.json
 
 json.sqlite
+*-shm
+*-wal
+
+*.db
 
 # Logs
 logs
