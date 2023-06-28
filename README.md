@@ -1,6 +1,2 @@
-# Kneesocks-Bot
-A bot to get images from Anime-Girls in Kneesocks
-
-### Moved to:
-
+# Kneesocks-Bot moved to:
 https://git.thicc-thighs.de/Sarah/Kneesocks-Bot
